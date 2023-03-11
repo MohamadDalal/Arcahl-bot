@@ -40,14 +40,15 @@ public class SongInfo implements ICommand{
     public void execute(SlashCommandInteractionEvent event) {
         JsonObject info;
         try {
-            info = AUA_API.querySongInfo(event.getOption("name").getAsString());
+            info = AUA_API.querySongInfo(event.getOption("name").getAsString().replaceAll("\\s+",""));
         } catch (Exception e) {
             event.reply("Caught an exception. Check logs for info").queue();
-            throw new RuntimeException(e);
+            e.printStackTrace();
+            return;
         }
         //System.out.println(info);
         if (info.get("status").getAsInt() !=0){
-            event.reply(info.get("message").getAsString()).queue();
+            event.reply("Error in querying AUA with status " + info.get("status").getAsInt() + ":\n\t" + info.get("message").getAsString()).queue();
             return;
         }
         JsonArray diffList = info.get("content").getAsJsonObject().get("difficulties").getAsJsonArray();

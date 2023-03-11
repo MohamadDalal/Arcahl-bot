@@ -9,7 +9,7 @@ import java.sql.*;
 
 public class DatabaseAPI {
 
-    private static HikariDataSource ds;
+    public static HikariDataSource ds;
 
     public static void init(String serverIP, String username, String password){
         String connectionUrl =
@@ -29,12 +29,16 @@ public class DatabaseAPI {
     public static String testQuery(){
         String retStr = "";
         try (Connection connection = ds.getConnection()) {
-            PreparedStatement ps = connection.prepareStatement("SELECT * FROM SongInfo");
+            /*PreparedStatement ps = connection.prepareStatement("SELECT * FROM SongInfo");
             ResultSet rs = ps.executeQuery();
             while(rs.next()){
-                System.out.println(rs.getInt("CustomerId") + " - " + rs.getString("Name"));
-                retStr = retStr + "\n" + rs.getInt("CustomerId") + " - " + rs.getString("Name");
-            }
+                System.out.println(rs.getString("song_id") + " - " + rs.getString("name_en"));
+                retStr = retStr + "\n" + rs.getString("song_id") + " - " + rs.getString("name_en");
+            }*/
+            PreparedStatement ps = connection.prepareStatement("SELECT TOP 1 * FROM SongInfo ORDER BY NEWID()");
+            ResultSet rs = ps.executeQuery();
+            rs.next();
+            retStr = "Your random song is: " + rs.getString("name_en");
         }
         // Handle any errors that may have occurred.
         catch (SQLException e) {

@@ -4,27 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51506a60-b7b5-4031-90ac-f0f6c20ae29d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Arcahl-bot.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AUAManager/AUA_API.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Arcahl_bot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Commands/AddSongInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Commands/FillSongList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Commands/ICommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Commands/SongInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Commands/UpdateSongInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Commands/UpdateSongList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Database/ArcaeaUserCodes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Database/BaseDatabase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Database/IDatabase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DatabaseAPI/DatabaseAPI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Listeners/EventListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Listeners/SlashCommandListener.java" afterDir="false" />
+    <list default="true" id="51506a60-b7b5-4031-90ac-f0f6c20ae29d" name="Changes" comment="Added a register user and song best score commands.">
+      <change afterPath="$PROJECT_DIR$/src/Commands/RegisterUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Commands/SongBest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AUAManager/AUA_API.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AUAManager/AUA_API.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Arcahl_bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arcahl_bot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/SongInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/SongInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DatabaseAPI/DatabaseAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DatabaseAPI/DatabaseAPI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,11 +91,30 @@
       <workItem from="1674515633399" duration="116000" />
       <workItem from="1674851937096" duration="14225000" />
       <workItem from="1674931627665" duration="744000" />
-      <workItem from="1675102386523" duration="3986000" />
+      <workItem from="1675102386523" duration="4903000" />
+      <workItem from="1675120934909" duration="8206000" />
+      <workItem from="1675172546542" duration="3019000" />
+      <workItem from="1675428844888" duration="490000" />
+      <workItem from="1675520250182" duration="1342000" />
+      <workItem from="1678040269985" duration="230000" />
+      <workItem from="1678547150272" duration="810000" />
     </task>
+    <task id="LOCAL-00001" summary="First commit. Working bot with support for AUA API and an SQL server database.">
+      <created>1675106639760</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1675106639760</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First commit. Working bot with support for AUA API and an SQL server database." />
+    <MESSAGE value="Added a register user and song best score commands." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a register user and song best score commands." />
   </component>
 </project>

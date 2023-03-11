@@ -37,7 +37,9 @@ public class Arcahl_bot {
         SCL.add(new FillSongList());
         SCL.add(new UpdateSongInfo());
         SCL.add(new UpdateSongList());
-        jda.addEventListener(new EventListener());
+        SCL.add(new RegisterUser());
+        SCL.add(new SongBest());
+        //jda.addEventListener(new EventListener());
         jda.addEventListener(SCL);
         jda.awaitReady();
         AUA_API.init(configJson.get("AUAToken").getAsString(), configJson.get("AUAURI").getAsString());

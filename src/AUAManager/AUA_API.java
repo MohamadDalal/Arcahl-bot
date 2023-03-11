@@ -12,6 +12,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
 public class AUA_API {
+    // Todo: Implement a method that translated the status error messages into something better.
     static boolean initialized = false;
     static String APItoken;
     static String APIURI;
@@ -48,8 +49,8 @@ public class AUA_API {
     public static JsonObject queryUserInfo(String userCode, int numRecent, boolean withSongInfo) throws URISyntaxException, IOException, InterruptedException {
         return getRequest(APIURI+"user/info?usercode="+userCode+"&recent="+numRecent+"&withsonginfo="+withSongInfo);
     }
-    public static JsonObject queryUserBest(String userCode, String songName, int songDiff) throws URISyntaxException, IOException, InterruptedException {
-        return getRequest(APIURI+"user/best?usercode="+userCode+"&songname="+songName+"&difficulty="+songDiff);
+    public static JsonObject queryUserBest(String userCode, String songName, int songDiff, boolean withRecent, boolean withSongInfo) throws URISyntaxException, IOException, InterruptedException {
+        return getRequest(APIURI+"user/best?usercode="+userCode+"&songname="+songName+"&difficulty="+songDiff+"&withrecent="+withRecent+"&withsonginfo="+withSongInfo);
     }
     public static JsonObject queryUserBest30(String userCode, int extraScores, boolean withRecent, boolean withSongInfo) throws URISyntaxException, IOException, InterruptedException {
         return getRequest(APIURI+"user/best30?usercode="+userCode+"&overflow="+extraScores+"&withrecent="+withRecent+"withsonginfo="+withSongInfo);
